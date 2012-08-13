@@ -1,0 +1,8 @@
+E:\Programme\Tridimensional.Rubik\Temp\bin\Debug\Assembly-CSharp.dll
+E:\Programme\Tridimensional.Rubik\Temp\bin\Debug\Assembly-CSharp.pdb
+E:\Programme\Tridimensional.Rubik\Temp\bin\Debug\UnityEditor.dll
+E:\Programme\Tridimensional.Rubik\Temp\bin\Debug\UnityEngine.dll
+E:\Programme\Tridimensional.Rubik\Temp\bin\Debug\nunit.framework.dll
+E:\Programme\Tridimensional.Rubik\obj\Debug\ResolveAssemblyReference.cache
+E:\Programme\Tridimensional.Rubik\obj\Debug\Assembly-CSharp.dll
+E:\Programme\Tridimensional.Rubik\obj\Debug\Assembly-CSharp.pdb
