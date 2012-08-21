@@ -10,7 +10,9 @@ public class GreetingController : Controller
 
     void Awake()
     {
-        InitializeScene();
+        RegisterComponents();
+
+        camera.backgroundColor = GlobalConfiguration.BackgroundColor;
 
         _logoTexture = Resources.Load("Images/Logos/256") as Texture2D;
         _logoTextureRect = GetCompatibleLogoRect();

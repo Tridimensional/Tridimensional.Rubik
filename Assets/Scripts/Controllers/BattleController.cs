@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Tridimensional.Rubik.Service.IServiceProvider;
+using Tridimensional.Rubik.Service.ServiceImplementation;
 
 public class BattleController : Controller
 {
+    IBattleService _battleService;
+
     void Awake()
     {
-        InitializeScene();
+        _battleService = BattleService.Instance;
+
+        RegisterComponents();
     }
 }

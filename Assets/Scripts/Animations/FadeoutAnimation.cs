@@ -15,7 +15,7 @@ public class FadeoutAnimation : MonoBehaviour
     void Awake()
     {
         _solidColor = new Texture2D(1, 1);
-        _solidColor.SetPixel(0, 0, GlobalConfiguration.BackgroundColor);
+        _solidColor.SetPixel(0, 0, GlobalConfiguration.ForegroundColor);
         _solidColor.Apply();
     }
 
