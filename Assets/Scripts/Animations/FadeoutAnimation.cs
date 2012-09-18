@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class FadeoutAnimation : MonoBehaviour
 {
-    public float Duration = 3;
     public Level NextLevel { get; set; }
 
-    public bool Finished { get { return _percentage >= 1; } }
-
+    float _duration = 3;
     float _percentage = 0;
     Texture2D _solidColor;
 
@@ -21,12 +19,12 @@ public class FadeoutAnimation : MonoBehaviour
 
     void OnGUI()
     {
-        if (Finished) { Application.LoadLevel(NextLevel.ToString()); }
+        if (_percentage >= 1) { Application.LoadLevel(NextLevel.ToString()); }
 
-        _percentage += Time.deltaTime / Duration;
+        _percentage += Time.deltaTime / _duration;
 
-        GUI.color = new Color(1, 1, 1, Mathf.Pow(_percentage, 3f));
         GUI.depth = -1;
+        GUI.color = new Color(1, 1, 1, Mathf.Pow(_percentage, 2f));
         GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), _solidColor);
     }
 }

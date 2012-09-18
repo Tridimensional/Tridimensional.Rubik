@@ -3,10 +3,7 @@ using UnityEngine;
 
 public class FadeinAnimation : MonoBehaviour
 {
-    public float Duration = 4;
-
-    public bool Finished { get { return _percentage >= 1; } }
-
+    float _duration = 3;
     float _percentage = 0;
     Texture2D _solidColor;
 
@@ -19,12 +16,12 @@ public class FadeinAnimation : MonoBehaviour
 
     void OnGUI()
     {
-        if (Finished) { return; }
+        if (_percentage >= 1) { return; }
 
-        _percentage += Time.deltaTime / Duration;
+        _percentage += Time.deltaTime / _duration;
 
-        GUI.color = new Color(1, 1, 1, 1 - Mathf.Pow(_percentage, 3f));
         GUI.depth = -1;
+        GUI.color = new Color(1, 1, 1, 1 - Mathf.Pow(_percentage, 3f));
         GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), _solidColor);
     }
 }
