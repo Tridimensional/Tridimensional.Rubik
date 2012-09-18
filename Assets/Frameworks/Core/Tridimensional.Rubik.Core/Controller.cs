@@ -7,20 +7,26 @@ public class Controller : MonoBehaviour
     public bool Fadein;
     public bool Fadeout;
 
-    protected void RegisterComponents()
+    bool _added;
+
+    void Awake()
     {
         if (Fadein)
         {
             gameObject.AddComponent<FadeinAnimation>();
         }
+
+        SendMessage("Init");
     }
 
     protected void LoadLevel(Level level)
     {
-        if (Fadeout && gameObject.GetComponent<FadeoutAnimation>() == null)
+        if (!_added && Fadeout)
         {
             var fadeoutAnimation = gameObject.AddComponent<FadeoutAnimation>();
             fadeoutAnimation.NextLevel = level;
+
+            _added = true;
         }
     }
 }

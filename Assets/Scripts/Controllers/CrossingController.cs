@@ -8,13 +8,11 @@ public class CrossingController : Controller
 {
     ICrossingService _crossingService;
 
-    void Awake()
+    void Init()
     {
         _crossingService = CrossingService.Instance;
 
         Camera.mainCamera.backgroundColor = GlobalConfiguration.BackgroundColor;
-
-        RegisterComponents();
     }
 
     void Update()

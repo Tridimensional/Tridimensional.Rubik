@@ -8,14 +8,12 @@ public class GreetingController : Controller
     Rect _logoTextureRect;
     Texture2D _logoTexture;
 
-    void Awake()
+    void Init()
     {
         _logoTexture = Resources.Load("Images/Logos/256") as Texture2D;
         _logoTextureRect = GetCompatibleLogoRect();
 
         Camera.mainCamera.backgroundColor = GlobalConfiguration.BackgroundColor;
-
-        RegisterComponents();
     }
 
     void OnGUI()

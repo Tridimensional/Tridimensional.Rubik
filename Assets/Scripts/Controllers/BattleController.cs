@@ -8,14 +8,12 @@ public class BattleController : Controller
     GameObject _rubik;
     IBattleService _battleService;
 
-    void Awake()
+    void Init()
     {
         _battleService = BattleService.Instance;
         _rubik = GameObject.Find("3X RUBIK");
 
         Camera.mainCamera.backgroundColor = GlobalConfiguration.BackgroundColor;
-
-        RegisterComponents();
     }
 
     void Update()
